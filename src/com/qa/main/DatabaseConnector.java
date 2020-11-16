@@ -34,13 +34,13 @@ public class DatabaseConnector {
 	}
 	
 	public void updateActor(String forename, String surname, int id) throws SQLException {
-		String sql = String.format("UPDATE actor SET `first_name` = '%s', `last_name` = '%s' WHERE `actor_id` = '%s'",forename, surname, id);
+		String sql = String.format("UPDATE actor SET `first_name` = '%s', `last_name` = '%s' WHERE `actor_id` = '%d'",forename, surname, id);
 		statement.executeUpdate(sql);
 		
 	}
 
 	public void deleteActor(int id) throws SQLException {
-		String sql = String.format("DELETE FROM actor WHERE actor_id = '%s'", id);
+		String sql = String.format("DELETE FROM actor WHERE actor_id = '%d'", id);
 		statement.executeUpdate(sql);
 	}
 	
